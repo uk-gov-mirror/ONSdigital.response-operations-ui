@@ -72,7 +72,7 @@ def view_and_remove_current_banner():
     if current_banner:
         return render_template('admin-remove-alert.html',
                                form=form,
-                               current_banner=current_banner,
+                               current_banner=current_banner.get('content'),
                                breadcrumbs=breadcrumbs)
     else:
         return redirect(url_for("admin_bp.banner_admin"))
