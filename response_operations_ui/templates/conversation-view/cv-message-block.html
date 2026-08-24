@@ -35,7 +35,9 @@
         "unreadLinkText": unreadLinkText,
         "messageId": 'conversation-message-body-' + loop.index|string
     }) %}
-        <dt hidden>Message:</dt>
+      <dl>
+        <dt class="ons-u-vh">Message:</dt>
         <dd><span style="white-space:pre-line">{{ message.get('body') }}</span></dd>
+      </dl>
     {% endcall %}
 {% endfor %}
